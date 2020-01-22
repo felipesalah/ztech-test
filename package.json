@@ -24,16 +24,12 @@
         "starter",
         "boilerplate"
     ],
-    "author": "Leonardo Maldonado <leonardomso11@gmail.com>",
+    "author": "Felipe Del Valle felipesalah@hotmail.com",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/leonardomso/react-bolt.git"
+        "url": "git+https://github.com/felipesalah/ztechtest.git"
     },
-    "bugs": {
-        "url": "https://github.com/leonardomso/react-bolt/issues"
-    },
-    "homepage": "https://github.com/leonardomso/react-bolt#readme",
     "devDependencies": {
         "@babel/cli": "^7.4.3",
         "@babel/core": "^7.4.3",
