@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import latLongReducer from './latLongReducer';
 
 const rootReducer = combineReducers({
-    state: () => ({})
+    geocode: latLongReducer
 });
 
 export default rootReducer;
