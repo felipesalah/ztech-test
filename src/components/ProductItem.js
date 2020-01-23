@@ -1,11 +1,11 @@
 import './ProductItem.css'
 import React from 'react';
 
-const ProductItem = () => {
+const ProductItem = props => {
     return (
         <div className="card">
-            <h4 className="title left">Product Name</h4>
-            <p className="left">$ 3,90</p>
+            <h4 className="title left">{props.product.title}</h4>
+            <p className="left">$ {props.product.productVariants[0].price}</p>
             <div className="actions">
                 <button className="btn" type="button" style={{marginRight: '10px'}}>
                     <span style={{fontSize: '20px'}}>+</span>

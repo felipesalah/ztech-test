@@ -1,5 +1,5 @@
-import axios from 'axios';
+import { createApolloFetch } from 'apollo-fetch';
 
-export default axios.create({
-    baseURL: 'https://api.code-challenge.ze.delivery/public/graphql',
+export default createApolloFetch({
+  uri: 'https://api.code-challenge.ze.delivery/public/graphql',
 });

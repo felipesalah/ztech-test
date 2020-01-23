@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from "react-router-dom";
 import styled from 'styled-components';
 import SearchBar from './SearchBar';
 import ProductList from './ProductList';
@@ -16,6 +17,7 @@ const Header = styled.header`
     color: white;
     position: fixed;
     top: 0;
+    z-index: 999;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 
                 0 3px 1px -2px rgba(0,0,0,0.12), 
                 0 1px 5px 0 rgba(0,0,0,0.2);
@@ -49,7 +51,9 @@ const App = () => (
         <Header>Z-tech</Header>
         <Container>
             <SearchBar />
-            <ProductList />
+            <Route path="/products">
+                <ProductList />
+            </Route>
         </Container>
         <Footer>github.com/felipesalah - 2020</Footer>
     </div>

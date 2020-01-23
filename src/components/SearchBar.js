@@ -1,7 +1,10 @@
 import './SearchBar.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchLatLong } from '../actions';
+import { useHistory } from 'react-router-dom';
+import { fetchLatLong, fetchPocId } from '../actions';
+import moment from 'moment';
+import _ from 'lodash';
 
 const SearchBar = (props) => {
     const [term, setTerm] = useState('');
@@ -12,8 +15,16 @@ const SearchBar = (props) => {
 
     const onFormSubmit = async event => {
         event.preventDefault();
-        props.fetchLatLong(term);
+        await props.fetchLatLong(term);
     };
+
+    const history = useHistory();
+
+    useEffect(() => {
+        if (!_.isEmpty(props.geocode)) {
+            props.fetchPocId(props.geocode, moment(new Date()).format()).then(() => history.push("/products"));
+        }
+    }, [props.geocode]);
 
     return (
         <div style={{width: '80%', paddingTop: '10px', margin: 'auto'}}>
@@ -39,4 +50,4 @@ const mapStateToProps = state => {
     return { geocode: state.geocode };
 }
 
-export default connect(mapStateToProps, { fetchLatLong })(SearchBar);
+export default connect(mapStateToProps, { fetchLatLong, fetchPocId })(SearchBar);

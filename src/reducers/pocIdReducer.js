@@ -1,10 +1,9 @@
 export default (state = {}, action) => {
     switch (action.type) {
-        case 'FETCH_LATLONG':
+        case 'FETCH_POCID':
             return {
                 ...state,
-                lat: action.payload.lat,
-                lng: action.payload.lng
+                pocId: action.payload
             };
         default:
             return state;
