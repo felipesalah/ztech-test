@@ -17,7 +17,7 @@ npm start
 ```
 
 The server will start and should open your default browser automatically. If not, you can access the link:
-- [localhos:8080](http://localhost:8080)
+- [localhost:8080](http://localhost:8080)
 
 Now just type the address "Rua Américo Brasiliense, São Paulo" as an example. Hit "Enter" with all your might and watch react and redux do the job.
 
