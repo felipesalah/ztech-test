@@ -5,7 +5,7 @@ const ProductItem = props => {
     return (
         <div className="card">
             <h4 className="title left">{props.product.title}</h4>
-            <p className="left">$ {props.product.productVariants[0].price}</p>
+            <p className="left">R$ {props.product.productVariants[0].price.toFixed(2).replace('.', ',')}</p>
             <div className="actions">
                 <button className="btn" type="button" style={{marginRight: '10px'}}>
                     <span style={{fontSize: '20px'}}>+</span>

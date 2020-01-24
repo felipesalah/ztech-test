@@ -15,7 +15,6 @@ const ProductList = props => {
     });
 
     useEffect(() => {
-        console.log("oi");
         if (_.isEmpty(props.products)) {
             props.fetchProducts(props.pocId.pocId);
         }
