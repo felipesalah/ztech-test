@@ -23,7 +23,7 @@ Now just type the address "Rua Américo Brasiliense, São Paulo" as an example
 
 ## Testing
 
-I wrote some tests to ensure that our reducers and actions work correctly. And also to ensure that our App starts without "crash" anything. To test, run:
+I wrote some tests to ensure that our reducers and actions works correctly. And also to ensure that our App starts without "crashing" anything. To test, run:
 ```
 npm test
 ```
